@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <mindmap :trees="json"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import mindmap from './components/mindmap'
+import json from './components/json2'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    mindmap
+  },
+  data() {
+    return {
+      json
+    }
   }
 }
 </script>

@@ -1,0 +1,13 @@
+{
+  "name": "cluster",
+  "children": [
+    {
+      "name": "HierarchicalCluster",
+      "value": 500
+    },
+    {
+      "name": "MergeEdge",
+      "value": 600
+    }
+  ]
+}
