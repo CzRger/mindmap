@@ -33,7 +33,6 @@ export default {
         .sum(function(d) { return d.value; })
         .sort(function(a, b) { return b.value - a.value; });
   
-  
       const tree = d3.tree()
         .size([width, height - 200]) //设定尺寸
         .separation(function separation(a, b) {
@@ -54,7 +53,6 @@ export default {
         .enter()
         .append('g')
         .attr('class', 'node')
-      
       
       node.attr("transform", function(d) { return "translate(" + (d.y + 100) + "," + d.x + ")"; })
         .attr('tx', function(d) {return d.y + 100})
@@ -95,15 +93,15 @@ export default {
         .append('path')
         .attr('class','link')
         .attr("d",function(d){
-          console.log(d)
           var start = {x: d.source.x, y: d.source.y + 100};
           var end = {x: d.target.x, y: d.target.y + 100};
           return pathConstructor({source: start, target: end});
         })
+      
       svg.call(d3Zoom())
         svg.on("dblclick.zoom", null);
       
-      node.call(d3Drag())
+      node.call(d3Drag(links))
     },
   },
   render() {
