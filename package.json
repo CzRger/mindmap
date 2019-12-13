@@ -18,7 +18,10 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "d3": "5.14.2",
+    "sass-loader": "^6.0.6",
+    "node-sass": "^4.7.2"
   },
   "eslintConfig": {
     "root": true,
@@ -29,7 +32,11 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "no-console": "off",
+      "vue/no-use-v-if-with-v-for": "off",
+      "no-unused-vars": "off"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
